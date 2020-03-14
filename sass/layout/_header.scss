@@ -1,4 +1,29 @@
 header {
-  height: 10rem;
-  border-bottom: 1px solid #bec2c5;
+  height: 6rem;
+  border-bottom: 0.1rem solid #bec2c5;
+
+  .logo {
+    width: 22.1rem;
+    padding: 2rem;
+    padding-left: 2rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .mobile-menu {
+    .mobile-nav {
+      background-color: $background-color;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      z-index: 999;
+      top: -100%;
+    }
+
+    @include respond(med-port) {
+      display: none;
+    }
+  }
 }

@@ -23,17 +23,31 @@ html {
   /* Makes it so 1rem == 10px, 1.5rem == 15px, etc. */ }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #ffffff;
+  margin: 0; }
 
 body {
   font-family: "Open Sans", sans-serif;
+  text-align: center;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.5;
   color: #363f49; }
 
-.heading-primary {
-  color: #00a7df; }
+.main-content {
+  text-align: left; }
+  .main-content .heading-primary {
+    color: #00a7df;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 700; }
+  .main-content .heading-secondary {
+    padding-left: 1.4rem;
+    margin-top: -0.5rem;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.8rem; }
 
 .row {
   max-width: 114rem;
@@ -62,5 +76,26 @@ body {
     width: calc(3 * ((100% - (6rem * 3)) / 4) + (2 * 6rem)); }
 
 header {
-  height: 10rem;
-  border-bottom: 1px solid #bec2c5; }
+  height: 6rem;
+  border-bottom: 0.1rem solid #bec2c5; }
+  header .logo {
+    width: 22.1rem;
+    padding: 2rem;
+    padding-left: 2rem; }
+    header .logo img {
+      max-width: 100%; }
+  header .mobile-menu .mobile-nav {
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: -100%; }
+  @media (min-width: 40em) {
+    header .mobile-menu {
+      display: none; } }
+
+.section-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse; }

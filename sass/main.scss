@@ -5,7 +5,9 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "layout/content-main";
 @import "layout/grid";
 @import "layout/header";
+@import "layout/sidenav";
 
 @import "pages/home";
