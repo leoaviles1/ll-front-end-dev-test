@@ -1,0 +1,45 @@
+// MEDIA QUERY MANAGER
+/*
+[0 - 640px] is where our normal styles apply
+640 - 1024px:  Medium portrait
+1024 - 1200px: Medium landscape
+1200 - 1366px:  Large screen sizes
+1366px+: Big desktop
+
+$breakpoint argument choices:
+- med-port
+- med-land
+- large
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == med-port {
+    @media (min-width: 40em) {
+      @content;
+    }
+  }
+  @if $breakpoint == med-land {
+    @media (min-width: 64em) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 85.375em) {
+      @content;
+    }
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
