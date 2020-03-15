@@ -2,4 +2,9 @@
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
+
+  @include respond(med-land) {
+    flex-direction: row;
+    padding: 5rem 0;
+  }
 }
