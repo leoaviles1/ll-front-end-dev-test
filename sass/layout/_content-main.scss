@@ -1,0 +1,11 @@
+.main-content {
+  padding: 0 3.5rem;
+
+  @include respond(med-land) {
+    border-bottom: 0.1rem solid $secondary-color;
+    border-left: 0.1rem solid $secondary-color;
+    border-right: 0.1rem solid $secondary-color;
+    box-shadow: inset 0 -8px 0 #f3f3f3;
+    margin-right: 2rem;
+  }
+}
