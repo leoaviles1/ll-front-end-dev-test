@@ -59,7 +59,7 @@ document
     mobileNavToggle();
   });
 
-//Event Listener to exit mobile menu when link is clicked
+//Event Listener to exit mobile menu when any mobile-nav-link is clicked
 document.querySelectorAll(".mobile-nav-link").forEach(item => {
   item.addEventListener("click", event => {
     mobileNavToggle();
