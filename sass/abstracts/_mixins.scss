@@ -2,8 +2,8 @@
 /*
 [0 - 640px] is where our normal styles apply
 640 - 1024px:  Medium portrait
-1024 - 1200px: Medium landscape
-1200 - 1366px:  Large screen sizes
+1024 - 1286px: Medium landscape
+1286 - 1366px:  Large screen sizes
 1366px+: Big desktop
 
 $breakpoint argument choices:
@@ -25,7 +25,7 @@ $breakpoint argument choices:
     }
   }
   @if $breakpoint == large {
-    @media (min-width: 75em) {
+    @media (min-width: 80.375em) {
       @content;
     }
   }

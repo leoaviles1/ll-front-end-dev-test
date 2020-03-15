@@ -1,8 +1,8 @@
 /*
 [0 - 640px] is where our normal styles apply
 640 - 1024px:  Medium portrait
-1024 - 1200px: Medium landscape
-1200 - 1366px:  Large screen sizes
+1024 - 1286px: Medium landscape
+1286 - 1366px:  Large screen sizes
 1366px+: Big desktop
 
 $breakpoint argument choices:
@@ -38,7 +38,7 @@ body {
 .main-content {
   text-align: left; }
   .main-content .heading-primary {
-    color: #00a7df;
+    color: #00a7e0;
     text-transform: uppercase;
     margin-bottom: 0;
     font-weight: 700;
@@ -52,6 +52,49 @@ body {
   .main-content p {
     margin: 1.4rem 0; }
 
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0; }
+  @media (min-width: 80.375em) {
+    .gallery {
+      flex-direction: row;
+      justify-content: space-between; } }
+  .gallery .box-image {
+    height: 18.4rem;
+    width: 27.7rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 3rem 0;
+    border: 1px solid #00a7e0;
+    position: relative; }
+    .gallery .box-image h2,
+    .gallery .box-image p {
+      display: none; }
+    .gallery .box-image:hover {
+      cursor: pointer; }
+      .gallery .box-image:hover:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #00a7e0;
+        position: absolute;
+        opacity: 0.4; }
+      .gallery .box-image:hover h2,
+      .gallery .box-image:hover p {
+        display: block;
+        color: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; }
+      .gallery .box-image:hover h2 {
+        font-size: 2rem;
+        padding-bottom: 2rem; }
+
 .mobile-toggle-container {
   background-color: #ffffff;
   display: block;
@@ -61,6 +104,8 @@ body {
   top: 0.6rem;
   right: 1rem;
   z-index: 1001; }
+  .mobile-toggle-container:hover {
+    cursor: pointer; }
   @media (min-width: 64em) {
     .mobile-toggle-container {
       display: none; } }
@@ -68,7 +113,8 @@ body {
     height: 4.5rem;
     width: 4.5rem;
     display: inline-block;
-    position: relative; }
+    position: relative;
+    pointer-events: none; }
     .mobile-toggle-container .mobile-toggle span {
       position: absolute;
       width: 2.5rem;
@@ -109,7 +155,8 @@ body {
       transition: inherit; }
 
 .main-content {
-  padding: 0 3.5rem; }
+  padding: 0 3.5rem;
+  width: 100%; }
   @media (min-width: 64em) {
     .main-content {
       border-bottom: 0.1rem solid #e4e2e2;
@@ -188,7 +235,7 @@ header {
             text-transform: uppercase;
             transition: 0.5s ease; }
             .top-nav .menu li .nav-link:hover {
-              color: #00a7df; }
+              color: #00a7e0; }
           .top-nav .menu li:last-child {
             padding: 0 4rem 0 7rem; }
             .top-nav .menu li:last-child .nav-link {
@@ -198,7 +245,7 @@ header {
                 color: #363f49; }
               .top-nav .menu li:last-child .nav-link:after {
                 content: "";
-                background-color: #00a7df;
+                background-color: #00a7e0;
                 width: 100%;
                 height: 10rem;
                 position: absolute;
@@ -235,7 +282,7 @@ header {
         font-weight: 600;
         transition: 0.5s ease; }
         .mobile-nav-wrapper .mobile-nav .menu .mobile-nav-link:hover {
-          color: #00a7df; }
+          color: #00a7e0; }
 
 .show {
   top: 0%; }
@@ -273,7 +320,7 @@ header {
       position: relative; }
       .subnav-list li:before {
         content: "\2022";
-        color: #00a7df;
+        color: #00a7e0;
         font-weight: 700;
         font-size: 2rem;
         padding-right: 0.7rem; }

@@ -8,6 +8,10 @@
   right: 1rem;
   z-index: 1001;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @include respond(med-land) {
     display: none;
   }
@@ -17,6 +21,7 @@
     width: 4.5rem;
     display: inline-block;
     position: relative;
+    pointer-events: none;
 
     span {
       position: absolute;
